@@ -1,11 +1,22 @@
-<h1>All Tasks</h1>
+<link rel="stylesheet" href="styles.css">
 
-<ul>
-<% @tasks.each do |task| %>
-  <li>
-  <%= check_box_tag 'Completed', '1', task.completed %>
-  <%= link_to task.title, task_path(task) %>
-  </li>
-<% end  %>
-</ul>
-<p><%= link_to '+ Add new task', tasks_new_path %></p>
+<h1 class="text-center my-4">All Tasks</h1>
+
+<div class="container">
+  <ul class="list-group">
+    <% @tasks.each do |task| %>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <%= check_box_tag 'Completed', '1', task.completed, class: 'form-check-input me-2' %>
+        <%= link_to task.title, task_path(task), class: 'task-title' %>
+        <div>
+          <%= link_to task_path(task), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' do %>
+            <i class="fas fa-trash-alt"></i> Delete
+          <% end %>
+        </div>
+      </li>
+    <% end  %>
+  </ul>
+  <div class="d-flex justify-content-center my-4">
+    <%= link_to '+ Add new task', tasks_new_path, class: 'btn btn-primary' %>
+  </div>
+</div>

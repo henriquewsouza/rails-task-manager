@@ -3,3 +3,5 @@
 <p>title: <%= @task.title %> </p>
 <p>description: <%= @task.details %> </p>
 <p>Completed: <%= check_box_tag 'Completed', '1', @task.completed %> </p>
+<%= link_to 'Edit', task_edit_path(@task) %>
+<%= link_to 'Back', tasks_path %>

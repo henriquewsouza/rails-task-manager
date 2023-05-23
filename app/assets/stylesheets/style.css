@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  margin-block-start: 10%;
+  margin-inline: 30%;
+}
+
+h1 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+li:hover {
+  background-color: #eee;
+}
+
+li a {
+  text-decoration: none;
+  color: #333;
+}
+
+li a:hover {
+  color: #666;
+}
+
+input[type=checkbox] {
+  margin-right: 10px;
+}
+
+button, a.button {
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+button:hover, a.button:hover {
+  background-color: #0069D9;
+}
+
+.delete {
+  background-color: #DC3545;
+}
+
+.delete:hover {
+  background-color: #C82333;
+}
